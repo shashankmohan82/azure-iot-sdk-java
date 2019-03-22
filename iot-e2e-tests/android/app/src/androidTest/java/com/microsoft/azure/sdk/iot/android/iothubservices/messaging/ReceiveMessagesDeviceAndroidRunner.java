@@ -55,10 +55,12 @@ public class ReceiveMessagesDeviceAndroidRunner extends ReceiveMessagesTests
         String privateKeyBase64Encoded = BuildConfig.IotHubPrivateKeyBase64;
         String publicKeyCertBase64Encoded = BuildConfig.IotHubPublicCertBase64;
         iotHubConnectionString = BuildConfig.IotHubConnectionString;
+        isBasicTierHub = Boolean.parseBoolean(BuildConfig.IsBasicTierHub);
         String x509Thumbprint = BuildConfig.IotHubThumbprint;
         String privateKey = new String(Base64.decodeBase64Local(privateKeyBase64Encoded.getBytes()));
         String publicKeyCert = new String(Base64.decodeBase64Local(publicKeyCertBase64Encoded.getBytes()));
 
+        System.out.println(System.getProperty("abc"));
         Collection inputs = inputsCommon(ClientType.DEVICE_CLIENT, publicKeyCert, privateKey, x509Thumbprint);
 
         identities = getIdentities(inputs);
