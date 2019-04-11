@@ -1,16 +1,19 @@
+/*
+ *  Copyright (c) Microsoft. All rights reserved.
+ *  Licensed under the MIT license. See LICENSE file in the project root for full license information.
+ */
+
 package com.microsoft.azure.sdk.iot.android.helper;
 
 import com.microsoft.appcenter.espresso.Factory;
 import com.microsoft.appcenter.espresso.ReportHelper;
-import com.microsoft.azure.sdk.iot.android.BuildConfig;
 
 import org.junit.After;
-import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 
-import static org.junit.Assert.assertTrue;
-
+// This class is to add a dummy test for every TestGroup.  Currently, App Center errors out
+// when a TestGroup did not execute any actual tests.
 public class DummyAndroidRunner
 {
     @Rule
